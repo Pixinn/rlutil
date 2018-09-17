@@ -82,7 +82,7 @@ int main() {
 			std::cout << "Hit Space to continue to the next test." << std::endl;
 			std::cout << "Turn count: " << cnt << std::endl;
 			rlutil::locate(x,y); std::cout << '@'; // Output player
-			char k = getch(); // Get character
+			int k = getch(); // Get character
 			if (k == 'a') --x;
 			else if (k == 'd') ++x;
 			else if (k == 'w') --y;
@@ -104,7 +104,7 @@ int main() {
 		while (true) {
 			rlutil::locate(1,4); std::cout << "Turn count: " << cnt;
 			if (kbhit()) {
-				char k = getch(); // Get character
+				int k = getch(); // Get character
 				rlutil::locate(x,y); std::cout << " "; // Erase player
 				if (k == 'a') --x;
 				else if (k == 'd') ++x;
@@ -172,7 +172,7 @@ int main() {
 	}
 	waitkey;
 
-	std::srand(std::time(0));
+	std::srand(static_cast<unsigned int>(std::time(0)));
 	rlutil::cls();
 	std::cout << "Test 13: Non-advancing string setting" << std::endl;
 	std::cout << "Next random character strings should appear rapidly after each other starting in the same position." << std::endl;

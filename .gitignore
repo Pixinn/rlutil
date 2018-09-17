@@ -1,3 +1,5 @@
+build*/
+
 *~
 Readme.html
 docs/nd
@@ -8,3 +10,6 @@ example-c
 # OS X Crap
 *.dSYM
 **/.DS_Store
+
+# Visual Sutio crap
+**/.vs/

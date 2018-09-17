@@ -601,7 +601,9 @@ RLUTIL_INLINE void setString(RLUTIL_STRING_T str) {
 /// Function: setChar
 /// Sets the character at the cursor without advancing the cursor
 RLUTIL_INLINE void setChar(char ch) {
-	const char buf[] = {ch, 0};
+    char buf[2];
+    buf[0] = ch;
+    buf[1] = 0;
 	setString(buf);
 }
 

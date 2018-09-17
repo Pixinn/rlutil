@@ -86,7 +86,7 @@ int main() {
 	while (1) {
 		// Input
 		if (kbhit()) {
-			char k = getkey();
+			int k = getkey();
 
 			int oldx = x, oldy = y;
 			if (k == 'a') { --x; ++moves; }
